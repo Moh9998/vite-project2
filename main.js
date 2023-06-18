@@ -33,21 +33,21 @@ scene.add(pointLight, ambientLight);
 //stars
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-  const material = new THREE.MeshStandardMaterial({ color: 0xB0B9E0 });
+  const material = new THREE.MeshStandardMaterial({ color: 0 });
   const star = new THREE.Mesh(geometry, material);
 
-  const [x, y, z] = Array(3)
+  const [x, y, z] = Array(9)
     .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(100));
+    .map(() => THREE.MathUtils.randFloatSpread(200));
 
   star.position.set(x, y, z);
   scene.add(star);
 }
 
-Array(2000).fill().forEach(addStar);
+Array(3000).fill().forEach(addStar);
 
 // Background
-const spaceTexture = new THREE.TextureLoader().load('./photos/ClassRoom.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./photos/ClassRomm.png');
 
 scene.background = spaceTexture;
 
