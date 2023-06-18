@@ -52,7 +52,7 @@ const spaceTexture = new THREE.TextureLoader().load('./photos/ClassRomm.png');
 scene.background = spaceTexture;
 
 // Avatar
-const jeffTexture = new THREE.TextureLoader().load('./photos/Lesson1.jpg');
+const jeffTexture = new THREE.TextureLoader().load('./photos/Lesson1.png');
 
 const jeff = new THREE.Mesh(new THREE.BoxGeometry(9, 9, 9), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 
